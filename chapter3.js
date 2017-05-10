@@ -19,10 +19,10 @@ function isEven(N) {
   return isEven(N-2);
 }
 
-// console.log(isEven(5)); => false
-// console.log(isEven(29984)); => true
-// console.log(isEven(-1)); => false
-// console.log(isEven(-2902)); => true
+// console.log(isEven(5)); // => false
+// console.log(isEven(29984)); // => true
+// console.log(isEven(-1)); // => false
+// console.log(isEven(-2902)); // => true
 
 /***********************************************************
 Count letters in a string
@@ -38,6 +38,22 @@ function countBs(anyString) {
   return result;
 }
 
-// console.log(countBs("BBC")); => 2
-// console.log(countBs("BBCAbcAJBLBB")); => 5
+// console.log(countBs("BBC")); // => 2
+// console.log(countBs("BBCAbcAJBLBB")); // => 5
 
+/***********************************************************
+Count letters in a string while choosing letter to count
+************************************************************/
+
+function countChar(anyString, letter) {
+  result = 0;
+  for (var i = 0; i < anyString.length; i++) {
+    if (anyString[i] === letter) {
+      result += 1
+    }
+  }
+  return result;
+}
+
+console.log(countChar("kakkerlak", "k")); // => 4
+console.log(countChar("balloon", "l")); // => 2
