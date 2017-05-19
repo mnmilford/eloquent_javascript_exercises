@@ -41,6 +41,8 @@ function sum(array) {
 /*******************************
 Reversing an Array
 *******************************/
+var arr1 = ["A", "B", "C"];
+var arr2 = [1, 2, 3];
 
 // My array reversal function
 function reverseArray(array) {
@@ -52,4 +54,17 @@ function reverseArray(array) {
 }
 
 // Testing reverseArray
-// console.log(reverseArray(["A", "B", "C"]));
+// console.log(reverseArray(arr));
+
+function reverseArrayInPlace(array) {
+  for (var i = 0; i < Math.floor(array.length / 2); i++) {
+    var old = array[i];
+    array[i] = array[array.length - 1 - i];
+    array[array.length - 1 - i] = old;
+  }
+  return array;
+}
+
+console.log(arr1 == reverseArray(arr1));
+console.log(reverseArrayInPlace(arr2));
+console.log(arr2 == reverseArrayInPlace(arr2));
