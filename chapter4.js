@@ -1,4 +1,6 @@
-// The Sum of a Range
+/*******************************
+The Sum of a Range
+*******************************/
 
 // My range function
 function range(start, end, step=1) {
@@ -34,3 +36,20 @@ function sum(array) {
 
 // Test a combination of my functions
 // console.log(sum(range(1, 10)));
+
+
+/*******************************
+Reversing an Array
+*******************************/
+
+// My array reversal function
+function reverseArray(array) {
+  var result = [];
+  for (var i = 0; i < array.length; i++) {
+    result.unshift(array[i]);
+  }
+  return result;
+}
+
+// Testing reverseArray
+// console.log(reverseArray(["A", "B", "C"]));
